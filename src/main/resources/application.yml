@@ -1,0 +1,26 @@
+server:
+    port: 8081
+spring:
+    datasource:
+        url: jdbc:h2:mem:testdb
+        driverClassName: org.h2.Driver
+        username: sa
+        password:
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        database: h2
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.H2Dialect
+                ddl-auto: create-drop
+    h2:
+        console:
+            enabled: true
+            path: /h2-console-envers
+            settings:
+                trace: false
+                web-allow-others: false
+          
+    main:
+        allow-bean-definition-overriding: true
+      
